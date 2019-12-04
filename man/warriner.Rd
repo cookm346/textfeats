@@ -11,7 +11,7 @@ warriner(x)
 \item{x}{a vector of strings. The strings can either be single words or longer documents.}
 }
 \value{
-a dataframe of word or document ratings
+a dataframe of word or document ratings containing valence, arousal, and dominance for each word of phrase. If the input string is a phrase, the mean for each norm is computed.
 }
 \examples{
 warriner(c("WALRUS", "Jerk", "paradise"))

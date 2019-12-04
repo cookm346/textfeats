@@ -5,14 +5,13 @@
 #' @return a dataframe of ratings
 #' @export
 
-warriner <- function(x, single_words = TRUE){
+warriner <- function(x){
     norms <- read.csv("data/warriner.csv")
 
-    if(single_words){
-        x <- clean_text(x)
-        return(t(sapply(x, function(y){
-            ind <- match(y, norms$word)
-            norms[ind , c("valence", "arousal", "dominance")]
-        })))
-    }
+    return(t(sapply(x, function(y){
+        y <- clean_text(y)
+        inds <- match(y, norms$word)
+        inds <- inds[!is.na(inds)]
+        colMeans(norms[inds , c("valence", "arousal", "dominance")])
+    })))
 }

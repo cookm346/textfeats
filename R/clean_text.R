@@ -6,5 +6,5 @@
 #' @export
 
 clean_text <- function(x){
-    return(tolower(strsplit(gsub("[^[:alnum:] ]", "", x), " +")[[1]]))
+    return(tolower(unlist(strsplit(gsub("[^[:alnum:] ]", "", x), " +"))))
 }

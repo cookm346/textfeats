@@ -6,11 +6,6 @@ last <- unlist(lapply(pos2, function(x)x[length(x)]))
 
 classes <- c("N", "p", "h", "V", "t", "i", "A", "v", "C", "P", "!", "r", "D", "I", "o")
 
-
-sapply(head(last), function(x){
-    grep(classes[1], x)
-})
-
 results <- t(sapply(last, function(x){
                 sapply(classes, function(y){
                     ifelse(length(grep(y, x) > 1), 1, 0)

@@ -18,5 +18,7 @@ colnames(pos_final) <- c("word", "Noun", "Plural", "Noun_Phrase", "Verb_particip
                                     "Verb_intransitive", "Adjective", "Adverb", "Conjunction", "Preposition",
                                     "Interjection", "Pronoun", "Definite_Article", "Indefinite_Article", "Nominative")
 
+pos_final$word <- gsub("[^[:alnum:] ]", "", pos_final$word)
+
 
 write.csv(pos_final, "data/moby_pos.csv", row.names = FALSE)

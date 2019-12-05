@@ -27,3 +27,4 @@ pos(c("the jerk store called", "the", "joyously"))
 ## the jerk store called    2      0           0               1               2
 ## the                      0      0           0               0               0
 ## joyously                 0      0           0               0               0
+}

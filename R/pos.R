@@ -6,7 +6,7 @@
 #' @export
 
 pos <- function(x){
-    norms <- read.csv("data/pos.csv")
+    norms <- read.csv("data/moby_pos.csv")
 
     return(t(sapply(x, function(y){
         y <- clean_text(y)

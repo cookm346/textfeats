@@ -6,12 +6,12 @@
 #' @export
 
 pos <- function(x){
-    norms <- read.csv("data/moby_pos.csv")
+    pos_tags <- read.csv("data/moby_pos.csv")
 
     return(t(sapply(x, function(y){
         y <- clean_text(y)
-        inds <- match(y, norms$word)
+        inds <- match(y, pos_tags$word)
         inds <- inds[!is.na(inds)]
-        colSums(norms[inds , -1])
+        colSums(pos_tags[inds , -1])
     })))
 }

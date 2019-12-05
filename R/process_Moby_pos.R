@@ -1,5 +1,5 @@
-pos <- readLines("http://www.gutenberg.org/files/3203/files/mobypos.txt")
-pos2 <- strsplit(pos,"[\\\\]|[^[:print:]]",fixed=FALSE)
+pos2 <- readLines("http://www.gutenberg.org/files/3203/files/mobypos.txt")
+pos2 <- strsplit(pos2,"[\\\\]|[^[:print:]]",fixed=FALSE)
 
 first <- unlist(lapply(pos2, function(x)paste0(x[1:(length(x)-1)], collapse = "")))
 last <- unlist(lapply(pos2, function(x)x[length(x)]))

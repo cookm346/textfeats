@@ -24,4 +24,4 @@ colnames(pos_final) <- c("word", "Noun", "Plural", "Noun_Phrase", "Verb_particip
                                     "Interjection", "Pronoun", "Definite_Article", "Indefinite_Article", "Nominative")
 
 
-write.csv(pos_final, "data/pos.csv", row.names = FALSE)
+write.csv(pos_final, "data/moby_pos.csv", row.names = FALSE)

@@ -6,8 +6,6 @@
 #' @export
 
 pos <- function(x){
-    pos_tags <- read.csv("data/moby_pos.csv")
-
     return(t(sapply(x, function(y){
         y <- clean_text(y)
         inds <- match(y, pos_tags$word)

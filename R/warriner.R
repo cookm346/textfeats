@@ -6,8 +6,6 @@
 #' @export
 
 warriner <- function(x){
-    norms <- read.csv("data/warriner.csv")
-
     return(t(sapply(x, function(y){
         y <- clean_text(y)
         inds <- match(y, norms$word)

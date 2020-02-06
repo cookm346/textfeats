@@ -10,7 +10,7 @@ semantics <- function(x, vectors){
     out <- matrix(NA_real_, length(x), ncol(vectors))
 
     for(i in seq_along(x)){
-        y <- clean_text(x)
+        y <- clean_text(x[i])
         print(y)
         inds <- match(y, rownames(vectors))
         inds <- inds[!is.na(inds)]

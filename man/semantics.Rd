@@ -16,15 +16,9 @@ semantics(x, vectors)
 a dataframe of word or document semantic vectors. Single words from x will have the semantic word vectors from the vectors argument. Longer phrases or documents will be compiled into a fixed length vector by computing the mean of all the vectors in the phrase or document.
 }
 \examples{
-warriner(c("WALRUS", "Jerk", "paradise"))
+semantics(c("WALRUS", "Jerk", "paradise"), TASA)
 ##          valence arousal dominance
 ## walrus   5.79    3.95    5.23
 ## jerk     2.43    6.45    4.84
 ## paradise 7       4.82    7.9
 
-warriner(c("THE WALRUS ATE the seal", "Jerk", "paradise"))
-##                           valence arousal dominance
-## THE WALRUS ATE the seal   5.395   3.225      5.43
-## Jerk                      2.430   6.450      4.84
-## paradise                  7.000   4.820      7.90
-}

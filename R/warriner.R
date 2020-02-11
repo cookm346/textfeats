@@ -17,6 +17,9 @@ warriner <- function(x){
             out[i, ] <- colMeans(norms[inds , c("valence", "arousal", "dominance")])
         else
             out[i, ] <- as.numeric(norms[inds , c("valence", "arousal", "dominance")])
+
+        colnames(out) <- c("valence", "arousal", "dominance")
+        rownames(out) <- x
     }
     return(out)
 }

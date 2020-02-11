@@ -15,7 +15,7 @@ semantics(x, vectors)
 a dataframe of word or document semantic vectors. Single words from x will have the semantic word vectors from the vectors argument. Longer phrases or documents will be compiled into a fixed length vector by computing the mean of all the vectors in the phrase or document.
 }
 \examples{
-semantics(c("WALRUS", "Jerk", "paradise"), TASA)
+##semantics(c("WALRUS", "Jerk", "paradise"), TASA)
 ##          valence arousal dominance
 ## walrus   5.79    3.95    5.23
 ## jerk     2.43    6.45    4.84

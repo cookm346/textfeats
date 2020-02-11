@@ -16,7 +16,7 @@ pos <- function(x){
         if(length(inds) > 1)
             out[i, ] <- colSums(pos_tags[inds , -1])
         else
-            out[i, ] <- pos_tags[inds , -1]
+            out[i, ] <- as.numeric(pos_tags[inds , -1])
     }
     return(out)
 }

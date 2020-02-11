@@ -6,10 +6,17 @@
 #' @export
 
 pos <- function(x){
-    return(t(sapply(x, function(y){
-        y <- clean_text(y)
+
+    out <- matrix(NA_real_, length(x), ncol(pos_tags))
+
+    for(i in seq_along(x)){
+        y <- clean_text(x[i])
         inds <- match(y, pos_tags$word)
         inds <- inds[!is.na(inds)]
-        colSums(pos_tags[inds , -1])
-    })))
+        if(length(inds) > 1)
+            out[i, ] <- colSums(pos_tags[inds , -1])
+        else
+            out[i, ] <- pos_tags[inds , -1]
+    }
+    return(out)
 }

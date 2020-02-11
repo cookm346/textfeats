@@ -17,6 +17,9 @@ pos <- function(x){
             out[i, ] <- colSums(pos_tags[inds , -1])
         else
             out[i, ] <- as.numeric(pos_tags[inds , -1])
+
+        colnames(out) <- colnames(pos_tags)[-1]
+        rownames(pos_tags) <- x
     }
     return(out)
 }

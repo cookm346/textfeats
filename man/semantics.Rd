@@ -9,7 +9,6 @@ semantics(x, vectors)
 }
 \arguments{
 \item{x}{a vector of strings. The strings can either be single words or longer documents.}
-}
 \item{vectors}{a matrix of word vectors, where each row is a word vector with the word labels stored as rownames}
 }
 \value{
@@ -22,3 +21,4 @@ semantics(c("WALRUS", "Jerk", "paradise"), TASA)
 ## jerk     2.43    6.45    4.84
 ## paradise 7       4.82    7.9
 
+}

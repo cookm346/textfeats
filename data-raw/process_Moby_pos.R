@@ -1,4 +1,4 @@
-pos_tags <- readLines("http://www.gutenberg.org/files/3203/files/mobypos.txt")
+pos_tags <- readLines("data/mobypos.txt")
 pos_tags <- strsplit(pos_tags, "[\\\\]|[^[:print:]]", fixed=FALSE)
 
 first <- unlist(lapply(pos_tags, function(x)paste0(x[1:(length(x)-1)], collapse = "")))

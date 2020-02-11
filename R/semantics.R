@@ -11,10 +11,8 @@ semantics <- function(x, vectors){
 
     for(i in seq_along(x)){
         y <- clean_text(x[i])
-        print(y)
         inds <- match(y, rownames(vectors))
         inds <- inds[!is.na(inds)]
-        print(inds)
         if(length(inds) > 1)
             out[i, ] <- colMeans(vectors[inds , ])
         else

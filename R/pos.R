@@ -7,7 +7,7 @@
 
 pos <- function(x){
 
-    out <- matrix(NA_real_, length(x), ncol(pos_tags))
+    out <- matrix(NA_real_, length(x), ncol(pos_tags) - 1)
 
     for(i in seq_along(x)){
         y <- clean_text(x[i])

@@ -6,10 +6,17 @@
 #' @export
 
 warriner <- function(x){
-    return(t(sapply(x, function(y){
-        y <- clean_text(y)
+
+    out <- matrix(NA_real_, length(x), ncol(norms) - 1)
+
+    for(i in seq_along(x)){
+        y <- clean_text(x[i])
         inds <- match(y, norms$word)
         inds <- inds[!is.na(inds)]
-        colMeans(norms[inds , c("valence", "arousal", "dominance")])
-    })))
+        if(length(inds) > 1)
+            out[i, ] <- colMeans(norms[inds , c("valence", "arousal", "dominance")])
+        else
+            out[i, ] <- as.numeric(norms[inds , c("valence", "arousal", "dominance")])
+    }
+    return(out)
 }

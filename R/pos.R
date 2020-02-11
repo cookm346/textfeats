@@ -19,7 +19,7 @@ pos <- function(x){
             out[i, ] <- as.numeric(pos_tags[inds , -1])
 
         colnames(out) <- colnames(pos_tags)[-1]
-        rownames(pos_tags) <- x
+        rownames(out) <- x
     }
     return(out)
 }

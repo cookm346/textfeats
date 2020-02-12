@@ -16,9 +16,5 @@ a dataframe of word or document semantic vectors. Single words from x will have 
 }
 \examples{
 ##semantics(c("WALRUS", "Jerk", "paradise"), TASA)
-##          valence arousal dominance
-## walrus   5.79    3.95    5.23
-## jerk     2.43    6.45    4.84
-## paradise 7       4.82    7.9
 
 }

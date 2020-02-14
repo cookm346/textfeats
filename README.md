@@ -83,7 +83,7 @@ For strings with more than one word, the sum for each parts of speech class is c
 
 <br>
 
-### Computing parts of speech based features
+### Computing word embeddings
 
 Finally, the package will generate a set of semantic vectors (i.e., word embeddings). Any set of word embeddings can be used. For strings with more than one word, the function will compute the mean of the word vectors in the string (i.e., the semantic gist of the document). The outout below is trucated.
 
@@ -98,8 +98,6 @@ semantics(x, TASA)
 ## Jerk!!             [2,] 0.001102812 0.001143806 -0.0008592891 -0.0005428566  0.001024854 -0.0007934065   ...
 ## very very good     [3,] 0.049006431 0.009857605 -0.0135557641 -0.0073958977 -0.022383744  0.0004875048   ...
 ```
-
-For strings with more than one word, the sum for each parts of speech class is computed.
 
 <br>
 <br>

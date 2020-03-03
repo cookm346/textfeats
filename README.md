@@ -68,7 +68,7 @@ For strings with more than one word, the mean valence, arousal, and dominance is
 
 ### Computing parts of speech based features
 
-The package will produce a set of features based on the parts of speech of the text (e.g., noun, verb, adjective). These parts of speech classes are extracted from the [Moby parts of Speech database.](https://en.wikipedia.org/wiki/Moby_Project#Part-of-Speech) Fiften different classes exist in the database. The outout below is trucated.
+The package will produce a set of features based on the parts of speech of the text (e.g., noun, verb, adjective). These parts of speech classes are extracted from the [Moby parts of Speech database.](https://en.wikipedia.org/wiki/Moby_Project#Part-of-Speech) Fifteen different classes exist in the database. The outout below is trucated.
 
 ```r
 pos(x)

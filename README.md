@@ -83,6 +83,21 @@ For strings with more than one word, the sum for each parts of speech class is c
 
 <br>
 
+### Computing concretness norms
+
+THe package will fetch concreteness norms for Brysbaert (2014). For strings with more than one word, the mean concreteness for each word.
+
+```r
+concreteness(x)
+
+##                     Concreteness
+## i am the WALRUS     2.796667
+## Jerk!!              3.260000
+## very very good      1.500000
+```
+
+<br>
+
 ### Computing word embeddings
 
 Finally, the package will generate a set of semantic vectors (i.e., word embeddings). Any set of word embeddings can be used. For strings with more than one word, the function will compute the mean of the word vectors in the string (i.e., the semantic gist of the document). The outout below is trucated.

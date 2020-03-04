@@ -85,7 +85,7 @@ For strings with more than one word, the sum for each parts of speech class is c
 
 ### Computing concretness norms
 
-The package will fetch concreteness norms for Brysbaert (2014). For strings with more than one word, the mean concreteness for each word will be returned.
+The package will fetch concreteness norms for Brysbaert et al. (2014). For strings with more than one word, the mean concreteness for each word will be returned.
 
 ```r
 concreteness(x)

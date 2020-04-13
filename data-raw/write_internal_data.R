@@ -1,1 +1,1 @@
-usethis::use_data(norms, concreteness_norms, pos_tags, internal = TRUE)
+usethis::use_data(norms, concrete_norms, pos_tags, internal = TRUE)

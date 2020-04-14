@@ -19,7 +19,7 @@ concreteness <- function(x){
             out[i, ] <- as.numeric(concrete_norms[inds , "Conc.M"])
 
         colnames(out) <- "Concreteness"
-        rownames(out) <- x
+        rownames(out) <- substr(x, 1, 25)
     }
     return(out)
 }

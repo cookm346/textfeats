@@ -18,5 +18,6 @@ semantics <- function(x, vectors){
         else
             out[i, ] <- vectors[inds , ]
     }
+    rownames(out) <- substr(x, 1, 25)
     return(out)
 }

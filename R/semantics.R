@@ -18,6 +18,6 @@ semantics <- function(x, vectors){
         else
             out[i, ] <- vectors[inds , ]
     }
-    rownames(out) <- substr(x, 1, 25)
+    rownames(out) <- make.names(substr(x, 1, 25), unique = TRUE)
     return(out)
 }

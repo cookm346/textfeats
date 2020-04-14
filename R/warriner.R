@@ -19,7 +19,7 @@ warriner <- function(x){
             out[i, ] <- as.numeric(norms[inds , c("valence", "arousal", "dominance")])
 
         colnames(out) <- c("valence", "arousal", "dominance")
-        rownames(out) <- substr(x, 1, 25)
+        rownames(out) <- make.names(substr(x, 1, 25), unique = TRUE)
     }
     return(out)
 }

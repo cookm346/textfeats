@@ -19,7 +19,7 @@ pos <- function(x){
             out[i, ] <- as.numeric(pos_tags[inds , -1])
 
         colnames(out) <- colnames(pos_tags)[-1]
-        rownames(out) <- substr(x, 1, 25)
+        rownames(out) <- make.names(substr(x, 1, 25), unique = TRUE)
     }
     return(out)
 }

@@ -13,6 +13,7 @@ count <- function(x){
 
     colnames(out) <- c("n_words", "n_unique_words", "n_chars", "n_unique_chars",
                        "n_periods", "n_commas", "n_question", "n_exclamation")
+    rownames(out) <- substr(x, 1, 25)
 
     return(out)
 
